@@ -1,0 +1,174 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-11-07T20:13:27.868Z",
+    "end": "2025-11-07T20:13:29.244Z",
+    "duration": 1376,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e8f9d9ba-b9de-4ac8-838b-2d956dfe234f",
+      "title": "",
+      "fullFile": "cypress/e2e/hw22/1_Pre_condition.cy.js",
+      "file": "cypress/e2e/hw22/1_Pre_condition.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2039cc24-e95f-42d5-864a-9d51e83344cf",
+          "title": "Pre-condition",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create user via API",
+              "fullTitle": "Pre-condition Create user via API",
+              "timedOut": null,
+              "duration": 905,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"/api/auth/signup\",\n  headers: {\n    accept: \"application/json\",\n    \"Content-Type\": \"application/json\"\n  },\n  body: {\n    name: \"Oleksii\",\n    lastName: \"Nosach\",\n    email: Cypress.env(\"TEST_USER_EMAIL\"),\n    password: Cypress.env(\"TEST_USER_PASSWORD\"),\n    repeatPassword: Cypress.env(\"TEST_USER_PASSWORD\")\n  }\n}).then(response => {\n  _user_sid.default.saveSidFromResponse(response);\n});",
+              "err": {},
+              "uuid": "9f22f9b3-b216-4f3f-a15a-aa4baf89285e",
+              "parentUUID": "2039cc24-e95f-42d5-864a-9d51e83344cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "3873fb13-ca17-4416-9482-2dec115592d0",
+              "title": "Logout and Login.",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Logout via API",
+                  "fullTitle": "Pre-condition Logout and Login. Logout via API",
+                  "timedOut": null,
+                  "duration": 167,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.logoutViaAPI();",
+                  "err": {
+                    "message": "TypeError: cy.logoutViaAPI is not a function",
+                    "estack": "TypeError: cy.logoutViaAPI is not a function\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/hw22/1_Pre_condition.cy.js:26:9)\n    at runnable.fn (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:145762:19)\n    at callFn (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:164849:21)\n    at Runnable.run (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:164836:7)\n    at <unknown> (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:170931:30)\n    at PassThroughHandlerContext.finallyHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)",
+                    "diff": null
+                  },
+                  "uuid": "7f98efb9-54c4-43ef-a193-fe7651bee222",
+                  "parentUUID": "3873fb13-ca17-4416-9482-2dec115592d0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Login via API",
+                  "fullTitle": "Pre-condition Logout and Login. Login via API",
+                  "timedOut": null,
+                  "duration": 242,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginViaAPI();",
+                  "err": {
+                    "message": "TypeError: cy.loginViaAPI is not a function",
+                    "estack": "TypeError: cy.loginViaAPI is not a function\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/hw22/1_Pre_condition.cy.js:30:9)\n    at runnable.fn (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:145762:19)\n    at callFn (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:164849:21)\n    at Runnable.run (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:164836:7)\n    at <unknown> (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:170931:30)\n    at PassThroughHandlerContext.finallyHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://guest:welcome2qauto@qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)",
+                    "diff": null
+                  },
+                  "uuid": "853407ad-775a-4794-a670-61dc9d3132b6",
+                  "parentUUID": "3873fb13-ca17-4416-9482-2dec115592d0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7f98efb9-54c4-43ef-a193-fe7651bee222",
+                "853407ad-775a-4794-a670-61dc9d3132b6"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 409,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "9f22f9b3-b216-4f3f-a15a-aa4baf89285e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 905,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
