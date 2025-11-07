@@ -44,7 +44,7 @@ export default defineConfig({
     },
     retries: 0,
     specPattern: [
-      "cypress/e2e/hw21/*.cy.{js,ts}",
+      "cypress/e2e/hw22/*.cy.js",
       "!cypress/e2e/1-getting-started/**/*.cy.{js,ts}",
       "!cypress/e2e/2-advanced-examples/**/*.cy.{js,ts}",
     ],
